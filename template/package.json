@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "description": "{{description}}",
   "main": "dist/{{name}}.cjs.js",
-  "jsnext:main": "dist/{{name}}.esm.js",
-  "module": "dist/{{name}}.esm.js",
+  "jsnext:main": "dist/{{name}}.es.js",
+  "module": "dist/{{name}}.es.js",
   "scripts": {
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
@@ -17,6 +17,9 @@
     "precommit": "lint-staged",
     "start": "NODE_ENV=development webpack-serve --config=config/webpack.config.js"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "{{author}}",
   "license": "MIT",
